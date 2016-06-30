@@ -9,8 +9,8 @@ define('CACHE_TIME', 5 * 60); // optional, seconds to cache the output
 require 'buffer.php';
 ```
 
-This will send last-modified, expires, and etag headers. If a request includes theetag and
-modified-since parameters the script can return a 304 not modified.
+This will send `last-modified`, `expires`, and `etag` headers. If a request includes `etag` and
+`modified-since` headers the script can intelligently return a 304 not modified.
 
 This uses output buffering, but it can't buffer headers. If you need to send out a header every time, cached or not, put that header code above the `require`.
 
